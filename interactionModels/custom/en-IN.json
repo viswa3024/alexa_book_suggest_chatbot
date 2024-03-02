@@ -1,0 +1,790 @@
+{
+  "interactionModel": {
+    "dialog": {
+      "intents": [
+        {
+          "slots": [
+            {
+              "name": "month",
+              "elicitationRequired": true,
+              "type": "AMAZON.Month",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.686040531794.1591202329891"
+              }
+            },
+            {
+              "name": "day",
+              "elicitationRequired": true,
+              "type": "AMAZON.Ordinal",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.686040531794.39370550774"
+              }
+            },
+            {
+              "name": "year",
+              "elicitationRequired": true,
+              "type": "AMAZON.FOUR_DIGIT_NUMBER",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.686040531794.107340332350"
+              }
+            }
+          ],
+          "name": "CaptureZodiacSignIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        },
+        {
+          "slots": [
+            {
+              "name": "author",
+              "elicitationRequired": true,
+              "type": "AUTHORLIST",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.763571659130.83563745270"
+              }
+            },
+            {
+              "name": "language",
+              "elicitationRequired": true,
+              "type": "AMAZON.Language",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.763571659130.1396949167051"
+              }
+            },
+            {
+              "name": "genre",
+              "elicitationRequired": true,
+              "type": "GENRELIST",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.763571659130.1498745945832"
+              }
+            }
+          ],
+          "name": "SuggestBookIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "languageModel": {
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "slots": [
+            {
+              "name": "month",
+              "type": "AMAZON.Month"
+            },
+            {
+              "name": "day",
+              "type": "AMAZON.Ordinal"
+            },
+            {
+              "name": "year",
+              "type": "AMAZON.FOUR_DIGIT_NUMBER"
+            }
+          ],
+          "name": "CaptureZodiacSignIntent",
+          "samples": [
+            "open  zodiac sign",
+            "get  zodiac sign",
+            "find out what my zodiac sign is",
+            "do you know what my zodiac sign is",
+            "zodiac sign",
+            "want to know my zodiac sign",
+            "I need to know my zodiac sign",
+            "can you give my zodiac sign",
+            "can you tell my zodiac sign",
+            "I need  my zodiac sign ",
+            "can you tell me what my zodiac sign is",
+            "what is your take on my zodiac sign",
+            "say my zodiac sign",
+            "tell my zodiac sign once more",
+            "please repeat my zodiac sign",
+            "please state my zodiac sign once more",
+            "i was born on {day} {month} {year} what is my zodiac sign",
+            "tell zodiac sign for my birthday",
+            "for my birthday please tell me my zodiac sign",
+            "tell me my birthday zodiac sign",
+            "tell me my zodiac sign for my birthday",
+            "tell me zodiac sign",
+            "let me know my zodiac sign",
+            "need  about my zodiac sign",
+            "please tell me what my zodiac sign is based on my birthday",
+            "could you please tell me what my zodiac sign is",
+            "whats the zodiac sign",
+            "I need information of my zodiac sign",
+            "i was born on {day} {month} {year}",
+            "i was born on {month} {day} {year}",
+            "i was born on {year} {month} {day}",
+            "i was born on {day} {month}",
+            "i was born on {month} {day}",
+            "i was born on {month} {year}",
+            "in {month} of {year} i was born",
+            "i was born in {month}",
+            "i was born on {year}",
+            "i was born on {day}",
+            "my birth day is on {day} {month} {year}",
+            "my birthday is on {day} {month} {year}",
+            "my birthday is {month} {day} {year}",
+            "{month}",
+            "{day}",
+            "{year}",
+            "{day} {month}",
+            "{month} {day}",
+            "{month} {year}",
+            "{year} {month}",
+            "{year} {month} {day}",
+            "{day} {month} {year}"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "author",
+              "type": "AUTHORLIST"
+            },
+            {
+              "name": "language",
+              "type": "AMAZON.Language"
+            },
+            {
+              "name": "genre",
+              "type": "GENRELIST"
+            }
+          ],
+          "name": "SuggestBookIntent",
+          "samples": [
+            "sugget book by {author} {language} {genre}",
+            "open suggest book",
+            "get my suggest book",
+            "suggest book based on {language} {author} {genre}",
+            "Recomend  book based on {language} {author} {genre}",
+            "suggest book based on {author} {language} {genre}",
+            "{author}",
+            "{language}",
+            "{genre}",
+            "{language} {author}",
+            "{author} {language}",
+            "{author} {genre}",
+            "{genre} {author}",
+            "{genre} {author} {language}",
+            "{language} {author} {genre}",
+            "Recommend a classic English novel.",
+            "What\u0027s a famous dystopian novel",
+            "Suggest a popular Spanish magic realism book.",
+            "Any good fantasy books in English",
+            "Recommend a Portuguese fiction book.",
+            "Tell me a famous English romance novel.",
+            "Suggest a modernist English novel.",
+            "Any satirical novels in English",
+            "Recommend a thrilling English detective novel.",
+            "Tell me a famous English horror novel.",
+            "Any historical fiction novels in English",
+            "Tell me an adventurous English novel.",
+            "Recommend a horror novel in English.",
+            "Suggest a Greek epic poetry.",
+            "Any classic English novels you\u0027d recommend",
+            "Tell me a Russian philosophical novel.",
+            "Recommend a classic French adventure novel.",
+            "Any Russian realist novels you\u0027d recommend",
+            "Tell me a romantic English novel.",
+            "Suggest a Russian psychological fiction book.",
+            "Recommend a detective novel in English.",
+            "Any French existentialist novels you\u0027d recommend",
+            "Tell me a classic English fantasy series.",
+            "Recommend a novella in English.",
+            "Suggest a French adventure novel.",
+            "Any well-known Greek epic poetry",
+            "Tell me a German surrealist novel.",
+            "Recommend an English science fiction novel.",
+            "Suggest a classic English horror novel.",
+            "Any English young adult novels you\u0027d recommend",
+            "Recommend a classic English fantasy series.",
+            "Recommend a classic English children\u0027s literature.",
+            "Suggest a French children\u0027s literature book.",
+            "Tell me a Dutch biography.",
+            "Give Recommend a classic English children\u0027s literature.",
+            "Suggest a humorous English science fiction novel.",
+            "Any English psychological thriller novels you\u0027d recommend",
+            "Recommend a Chinese military classic.",
+            "Tell me a Swedish thriller novel.",
+            "Suggest a classic English fantasy novel.",
+            "Any English dystopian novels you\u0027d recommend",
+            "Tell me a famous English science fiction novel.",
+            "Recommend a recent English science fiction novel.",
+            "Suggest a classic English post-apocalyptic novel.",
+            "Any well-known English young adult novels you\u0027d recommend",
+            "Give me a famous English historical fiction novel.",
+            "Recommend a thrilling English novel.",
+            "Suggest a historical fiction novel in English.",
+            "Tell me a popular English young adult novel.",
+            "Recommend a classic English thriller novel.",
+            "Any famous English fiction novels you\u0027d recommend",
+            "Suggest a recent English fiction novel.",
+            "Give  a famous English historical fiction novel.",
+            "Recommend a psychological English novel.",
+            "Suggest a classic English cookbook.",
+            "Tell me a classic English writing guide.",
+            "Recommend a recent English spirituality book."
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": " Eckhart Tolle"
+              }
+            },
+            {
+              "name": {
+                "value": "William Strunk Jr."
+              }
+            },
+            {
+              "name": {
+                "value": " Irma S. Rombauer"
+              }
+            },
+            {
+              "name": {
+                "value": " M. Scott Peck"
+              }
+            },
+            {
+              "name": {
+                "value": " Markus Zusak"
+              }
+            },
+            {
+              "name": {
+                "value": "Donna Tartt"
+              }
+            },
+            {
+              "name": {
+                "value": "Alice Walker"
+              }
+            },
+            {
+              "name": {
+                "value": "Robert Ludlum"
+              }
+            },
+            {
+              "name": {
+                "value": "James Dashner"
+              }
+            },
+            {
+              "name": {
+                "value": "Kathryn Stockett"
+              }
+            },
+            {
+              "name": {
+                "value": "Paula Hawkins"
+              }
+            },
+            {
+              "name": {
+                "value": "Khaled Hosseini"
+              }
+            },
+            {
+              "name": {
+                "value": "John Green"
+              }
+            },
+            {
+              "name": {
+                "value": "Andy Weir"
+              }
+            },
+            {
+              "name": {
+                "value": "Lois Lowry"
+              }
+            },
+            {
+              "name": {
+                "value": "Margaret Atwood"
+              }
+            },
+            {
+              "name": {
+                "value": "William Goldman"
+              }
+            },
+            {
+              "name": {
+                "value": "Stieg Larsson"
+              }
+            },
+            {
+              "name": {
+                "value": "Sun Tzu"
+              }
+            },
+            {
+              "name": {
+                "value": "Thomas Harris"
+              }
+            },
+            {
+              "name": {
+                "value": "Douglas Adams"
+              }
+            },
+            {
+              "name": {
+                "value": "Rudyard Kipling"
+              }
+            },
+            {
+              "name": {
+                "value": "Anne Frank"
+              }
+            },
+            {
+              "name": {
+                "value": "Antoine de Saint-Exupéry"
+              }
+            },
+            {
+              "name": {
+                "value": "Kenneth Grahame"
+              }
+            },
+            {
+              "name": {
+                "value": "S.E. Hinton"
+              }
+            },
+            {
+              "name": {
+                "value": "Bram Stoker"
+              }
+            },
+            {
+              "name": {
+                "value": "H.G. Wells"
+              }
+            },
+            {
+              "name": {
+                "value": "Franz Kafka"
+              }
+            },
+            {
+              "name": {
+                "value": "Ernest Hemingway"
+              }
+            },
+            {
+              "name": {
+                "value": "C.S. Lewis"
+              }
+            },
+            {
+              "name": {
+                "value": "Albert Camus"
+              }
+            },
+            {
+              "name": {
+                "value": "Alexandre Dumas"
+              }
+            },
+            {
+              "name": {
+                "value": "Nathaniel Hawthorne"
+              }
+            },
+            {
+              "name": {
+                "value": "Leo Tolstoy"
+              }
+            },
+            {
+              "name": {
+                "value": "Dante Alighieri"
+              }
+            },
+            {
+              "name": {
+                "value": "Arthur Conan Doyle"
+              }
+            },
+            {
+              "name": {
+                "value": "Emily Brontë"
+              }
+            },
+            {
+              "name": {
+                "value": "Charles Dickens"
+              }
+            },
+            {
+              "name": {
+                "value": "Fyodor Dostoevsky"
+              }
+            },
+            {
+              "name": {
+                "value": "Oscar Wilde"
+              }
+            },
+            {
+              "name": {
+                "value": "Homer"
+              }
+            },
+            {
+              "name": {
+                "value": "Mary Shelley"
+              }
+            },
+            {
+              "name": {
+                "value": "Herman Melville"
+              }
+            },
+            {
+              "name": {
+                "value": "Margaret Mitchell"
+              }
+            },
+            {
+              "name": {
+                "value": "Cormac McCarthy"
+              }
+            },
+            {
+              "name": {
+                "value": "Suzanne Collins"
+              }
+            },
+            {
+              "name": {
+                "value": "Stephen King"
+              }
+            },
+            {
+              "name": {
+                "value": "John Steinbeck"
+              }
+            },
+            {
+              "name": {
+                "value": "Dan Brown"
+              }
+            },
+            {
+              "name": {
+                "value": "Virginia Woolf"
+              }
+            },
+            {
+              "name": {
+                "value": "J.K. Rowling"
+              }
+            },
+            {
+              "name": {
+                "value": "Paulo Coelho"
+              }
+            },
+            {
+              "name": {
+                "value": "Jane Austen"
+              }
+            },
+            {
+              "name": {
+                "value": "J.R.R. Tolkien"
+              }
+            },
+            {
+              "name": {
+                "value": "Gabriel Garcia Marquez"
+              }
+            },
+            {
+              "name": {
+                "value": "J.D. Salinger"
+              }
+            },
+            {
+              "name": {
+                "value": "Aldous Huxley"
+              }
+            },
+            {
+              "name": {
+                "value": "F. Scott Fitzgerald"
+              }
+            },
+            {
+              "name": {
+                "value": "George Orwell"
+              }
+            },
+            {
+              "name": {
+                "value": "Harper Lee"
+              }
+            }
+          ],
+          "name": "AUTHORLIST"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "Spirituality"
+              }
+            },
+            {
+              "name": {
+                "value": "Psychology"
+              }
+            },
+            {
+              "name": {
+                "value": "Writing"
+              }
+            },
+            {
+              "name": {
+                "value": "Cooking (Cookbook)"
+              }
+            },
+            {
+              "name": {
+                "value": "Military"
+              }
+            },
+            {
+              "name": {
+                "value": "Biography"
+              }
+            },
+            {
+              "name": {
+                "value": "Children\u0027s Literature"
+              }
+            },
+            {
+              "name": {
+                "value": "Young Adult"
+              }
+            },
+            {
+              "name": {
+                "value": "Surrealism"
+              }
+            },
+            {
+              "name": {
+                "value": "Novella"
+              }
+            },
+            {
+              "name": {
+                "value": "Romanticism"
+              }
+            },
+            {
+              "name": {
+                "value": "Philosophical"
+              }
+            },
+            {
+              "name": {
+                "value": "Existentialism"
+              }
+            },
+            {
+              "name": {
+                "value": "Realist"
+              }
+            },
+            {
+              "name": {
+                "value": "Allegory"
+              }
+            },
+            {
+              "name": {
+                "value": "Detective"
+              }
+            },
+            {
+              "name": {
+                "value": "Psychological Fiction"
+              }
+            },
+            {
+              "name": {
+                "value": "Adventure"
+              }
+            },
+            {
+              "name": {
+                "value": "Historical Fiction"
+              }
+            },
+            {
+              "name": {
+                "value": "Post-Apocalyptic"
+              }
+            },
+            {
+              "name": {
+                "value": "Science Fiction"
+              }
+            },
+            {
+              "name": {
+                "value": "Horror"
+              }
+            },
+            {
+              "name": {
+                "value": "Thriller"
+              }
+            },
+            {
+              "name": {
+                "value": "Satire"
+              }
+            },
+            {
+              "name": {
+                "value": "Modernist"
+              }
+            },
+            {
+              "name": {
+                "value": "Romance"
+              }
+            },
+            {
+              "name": {
+                "value": "Fantasy"
+              }
+            },
+            {
+              "name": {
+                "value": "Magic Realism"
+              }
+            },
+            {
+              "name": {
+                "value": "Classic"
+              }
+            },
+            {
+              "name": {
+                "value": "Dystopian"
+              }
+            },
+            {
+              "name": {
+                "value": "Fiction"
+              }
+            }
+          ],
+          "name": "GENRELIST"
+        }
+      ],
+      "invocationName": "hackathon project"
+    },
+    "prompts": [
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Which month were you born"
+          }
+        ],
+        "id": "Elicit.Slot.686040531794.1591202329891"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Which day were you born"
+          }
+        ],
+        "id": "Elicit.Slot.686040531794.39370550774"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Which year were you born"
+          }
+        ],
+        "id": "Elicit.Slot.686040531794.107340332350"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Enter your preferred author"
+          }
+        ],
+        "id": "Elicit.Slot.763571659130.83563745270"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "which language you prefer"
+          }
+        ],
+        "id": "Elicit.Slot.763571659130.1396949167051"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "which genre you prefer"
+          }
+        ],
+        "id": "Elicit.Slot.763571659130.1498745945832"
+      }
+    ]
+  }
+}
